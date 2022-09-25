@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background:linear-gradient(rgba(0,0,0,0.4) , rgba(0,0,0,0.4) ),url(alexander-nedviga-40-black-wood-background-textures-27.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+form{
+    margin: auto;
+    margin-top: 20px;
+    width: 1000px;
+    height: 750px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background: linear-gradient( rgba(0,0,0,0.5) , rgba(0,0,0,0.5) );
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 12px;
+    color: aliceblue;
+}
+
+.turns {
+    display: flex;
+    justify-content: center;
+}
+
+.score{
+    width: 120px;
+    height: 150px;
+    border: 1px solid aliceblue;
+    border-radius:30px ;
+    -webkit-border-radius:30px ;
+    -moz-border-radius:30px ;
+    -ms-border-radius:30px ;
+    -o-border-radius:30px ;
+}
+
+.X{
+    text-align: center;
+    padding: 40px;
+    font-size: 50px;
+    color: rgb(5, 96, 233);
+}
+
+.O{
+    text-align: center;
+    padding: 40px;
+    font-size: 50px;
+    color: #f84a43;
+}
+
+#txtX{
+    color: aliceblue;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#txtO{
+    color: aliceblue;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.indexes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell{
+    width: 120px;height: 120px;
+    border: 1px solid aliceblue;
+    font-size: 50px;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+
+#btn{
+    background: transparent;
+    padding: 12px 30px;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    margin-left: 45%;
+    margin-top:20px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    font-size: 15px;
+}
+
+#btn:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    cursor: pointer;
+}
