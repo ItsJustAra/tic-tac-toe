@@ -10,17 +10,19 @@ const Conditions = [
     [0, 4, 8],[2, 4, 6]
 ];
 
-document.getElementById("btn").onclick = function () {
+document.getElementById("btn").onclick = function AutoReset () {
 
     document.getElementById("txtX").innerHTML = "Your Turn" ;
     document.getElementById("txtO").innerHTML = "" ;
     indexes.forEach(reset) ;
     player = 'X' ;
     let wins = false ;
+    console.log("it works see");
 }
 
 function reset( ele , index ) {
     document.getElementById(ele).innerHTML = "" ;
+    document.getElementById(ele).style.pointerEvents = "auto";
     gameState[index] = '';
 }
 
@@ -31,6 +33,7 @@ function print( ele , index ) {
         if( player === 'X') {
             document.getElementById(ele).innerHTML = player;
             document.getElementById(ele).style.color = "rgb(5, 96, 233)" ;
+            document.getElementById(ele).style.pointerEvents = "none";
             gameState[index] = player ;
             player = 'O' ; 
             document.getElementById("txtX").innerHTML = "" ;
@@ -68,10 +71,14 @@ function check(ele){
             }
 
             alert(`${ele[Conditions[i][0]]} WINS , Press The Reset Button For A Other Round`) ;
+
+            indexes.forEach(function(ele, index){
+                document.getElementById(ele).style.pointerEvents = "none";
+            })
         }
     }
 
-    if( wins !== false){
+    if( wins !== true){
 
         let count = 0 ;
 
@@ -85,6 +92,9 @@ function check(ele){
             document.getElementById("txtX").innerHTML = "DRAW" ;
             document.getElementById("txtO").innerHTML = "DRAW" ;
             alert(`DRAW , Press The Reset Button For A Other Round`) ;
+            indexes.forEach(function(ele, index){
+                document.getElementById(ele).style.pointerEvents = "none";
+            })
         }
     }
 }
